@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinepolis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Comic Sans Ms;
+            background-color: white;
+            color: #071026;
+        }
+
+        header {
+            background-color: #0B1B3D;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #162A52;
+        }
+
+        header h1 {
+            color: white;
+        }
+
+        nav {
+            background-color: #0B1B3D;
+            padding: 12px;
+            border-bottom: 1px solid #162A52;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #A2B5D5;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        article {
+            max-width: 900px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .galeria-imagenes {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .galeria-imagenes img {
+            width: 120px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 1px solid #0B1B3D;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            max-width: 400px;
+            background-color: #162A52;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        select, input {
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .submit {
+            background-color: #0B1B3D;
+            color: white;
+        }
+
+        .submit:hover {
+            background-color: #071026;
+        }
+
+        .reset {
+            background-color: #333333;
+            color: white;
+            border: 1px solid #555555;
+        }
+
+        footer {
+            background-color: #050A18;
+            padding: 15px;
+            text-align: center;
+            color: #A2B5D5;
+            margin-top: 20px;
+            border-top: 1px solid #162A52;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cinepolis</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Cartelera</a></li>
+            <li><a href="#">Promociones</a></li>
+            <li><a href="cuenta.html">Club Cinepolis</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <h2>Cartelera y Boletos</h2>
+
+            <div class="galeria-imagenes">
+                <img src="pelicula1.jpg" alt="El Infierno">
+                <img src="pelicula2.jpg" alt="No Manches Frida 2">
+                <img src="pelicula3.jpg" alt="Mirreyes vs Godínez: Las Vegas">
+                <img src="pelicula4.jpg" alt="Paddington: Aventura en la Selva">
+                <img src="pelicula5.jpg" alt="Ted">
+                <img src="pelicula6.jpg" alt="Sharknado">
+                <img src="pelicula7.jpg" alt="El Secreto de la Calabaza Mágica">
+                <img src="pelicula8.jpg" alt="Terror Bajo la Tierra">
+                <img src="pelicula9.jpg" alt="La Lego Película">
+                <img src="pelicula10.jpg" alt="Diario de Greg">
+                <img src="pelicula11.jpg" alt="Diario de Greg: Días de Perros">
+                <img src="pelicula12.jpg" alt="El Diario de Greg 3: Días de Perros">
+                <img src="pelicula13.jpg" alt="El Circo de Capulina">
+                <img src="pelicula14.jpg" alt="Capulina Vol. 5">
+                <img src="pelicula15.jpg" alt="Acorralado">
+            </div>
+
+            <form action="" method="post">
+                <label for="producto">Selecciona tu Película:</label>
+                <select id="producto" name="producto">
+                    <option>El Infierno</option>
+                    <option>No Manches Frida 2</option>
+                    <option>Mirreyes vs Godínez: Las Vegas</option>
+                    <option>Paddington: Aventura en la Selva</option>
+                    <option>Ted</option>
+                    <option>Sharknado</option>
+                    <option>El Secreto de la Calabaza Mágica</option>
+                    <option>Terror Bajo la Tierra</option>
+                    <option>La Lego Película</option>
+                    <option>Diario de Greg</option>
+                    <option>Diario de Greg: Días de Perros</option>
+                    <option>El Diario de Greg 3: Días de Perros</option>
+                    <option>El Circo de Capulina</option>
+                    <option>Capulina Vol. 5</option>
+                    <option>Acorralado (Vicente Fernández)</option>
+                </select>
+
+                <label for="horario">Selecciona el Horario:</label>
+                <select id="horario" name="horario">
+                    <option>12:00 PM</option>
+                    <option>02:30 PM</option>
+                    <option>05:00 PM</option>
+                    <option>07:30 PM</option>
+                    <option>10:00 PM</option>
+                </select>
+
+                <label for="cantidad">Cantidad de Boletos:</label>
+                <input type="number" id="cantidad" name="cantidad" value="1" min="1">
+
+                <div class="btn-group">
+                    <input type="submit" value="Comprar" class="btn submit">
+                    <input type="reset" value="Borrar" class="btn reset">
+                </div>
+            </form>
+        </article>
+    </main>
+
+    <footer>
+        <p>Daniel Vazquez Montañez | 5ºI | 24308051280673</p>
+    </footer>
+
+</body>
+</html>
